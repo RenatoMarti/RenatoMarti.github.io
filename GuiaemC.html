@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello Tutorial</title>
+		<style>
+			h1{
+				color: #2d572c;
+			}
+
+		</style>
+	</head>
+	<body>
+		<center>
+		<h1 style="color: black">Tutorial para a Linguagem de Programação C</h1>
+		</center>
+		<h1>Historia</h1>
+		<p> A linguagem C foi criada por Dennis Ritchie, em 1972, no centro de Pesquisas da Bell Laboratories. Sua primeira utilização importante foi a reescrita do Sistema
+		Operacional UNIX, que até então era escrito em assembly.
+		Em meados de 1970 o UNIX saiu do laboratório para ser liberado para as universidades. Foi o suficiente para que o sucesso da linguagem atingisse proporções tais que, por volta de 1980, já existiam várias versões de compiladores C oferecidas
+		por várias empresas, não sendo mais restritas apenas ao ambiente UNIX, porém
+		compatíveis com vários outros sistemas operacionais. </p>
+		<h3>Mas o que é C?</h3>
+		<p>Mas o que é C? C é o nome de uma linguagem atualmente utilizada em diferentes áreas e propósitos. Faz parte hoje de uma linguagem considerada avançada, desenvolvida nos laboratórios Bell nos anos 70.</p>
+		
+		<p>definição formal da linguagem pode ser encontrada no livro “The C Programming Language” de Brian W. Kernighan e Dennis M. Ritchie (os pais da linguagem). Nos anos 80 iniciou-se um trabalho de criação de um padrão chamado C ANSI (American National Standardization Institute).
+		
+		É uma linguagem de nível médio, pois pode-se trabalhar em um nível próximo ao da máquina ou como uma linguagem de alto nível como outras existentes.</p>
+		
+		<p>Com o C podemos escrever programas concisos, organizados e de fácil entendimento, mas infelizmente a falta de disciplina pode gerar programas mal escritos, difíceis de serem lidos e compreendidos. Não se deve esquecer que C é uma linguagem para programadores, pois impõe poucas restrições ao que pode ser feito. O C é amigável e estruturado para encorajar bons hábitos de programação; cabe ao programador exercitar esses hábitos.
+		</p>
+		<h3>O que é uma variável?</h3>
+		Variável é um local reservado na memória para armazenar um tipo de dado.
+		Toda variável deve ter um identificador, ou seja um nome.Além de ter um nome, a variável também precisa ter um tipo.<br><p>
+		
+		<b><font size="3">Regras Gerais de Variáveis</font></b>
+		<ul>
+			<li>O nome de uma variável pode ser de uma letra até
+				palavras com no máximo 32 caracteres.</li>
+			<li>Obrigatoriamente deve começar com uma letra ou
+				undercore (“_”). O restante pode ser letras de A a Z,
+				maiúsculas, minúsculas, números e o underscore.<br>
+				<i>Ex: a; num; essa_e_uma_variavel; tambem_essa.</i></li>
+			<li>
+				Cuidados : O nome de uma variável não pode ser igual a uma palavra
+				reservada.<br>
+ 				O nome de uma variável não pode ser igual a de uma função
+				declarada pelo programador ou pelas bibliotecas do C.
+			</li>	
+		</ul>
+		<h3>O que é? E como funcionar a Atribuição.</h3>
+		<p>Uma operação de atribuição atribui o valor do operando à direita para o local de armazenamento nomeado pelo operando à esquerda. Portanto, o operando à esquerda de uma operação de atribuição deve ser um valor l modificável. Após a atribuição, uma expressão de atribuição tem o valor do operando à esquerda mas não é um valor l.</p>
+		<table border="1">
+			<tr>
+				<td>Operador</td>
+				<td>Operação Executada</td>
+			</tr>
+			<tr>
+				<td>&nbsp;=</td>
+				<td>Atribuição simples</td>
+			</tr>
+			<tr>
+				<td>&nbsp;*=</td>
+				<td>Atribuição de multiplicação</td>
+			</tr>
+			<tr>
+				<td>&nbsp;/=</td>
+				<td>Atribuição de divisão</td>
+			</tr>
+			<tr>
+				<td>&nbsp;%=</td>
+				<td>Atribuição restante</td>
+			</tr>
+			<tr>
+				<td>&nbsp;+=</td>
+				<td>&nbsp;Atribuição de adição</td>
+			</tr>
+			<tr>
+				<td>&nbsp;–=</td>
+				<td>&nbsp;Atribuição de subtração</td>
+			</tr>
+			<tr>
+				<td>&nbsp;+</td>
+				<td>&nbsp;Atribuição de Soma Simples</td>
+			</tr>
+		</table>
+		<p>
+		<b><i>Exemplo</i></b>
+		<code>
+			<br>#include <stdio.h>
+			<br>#include <stdlib.h>
+
+			<br>int main()
+<br>		{ <br>
+    		&nbsp;int n1,n2,soma;
+<br>   		&nbsp;printf("Exemplo de Atribuiçao de valor!\n");
+<br>    	&nbsp;printf("Digite o 1 Valor!\n");
+<br>   		&nbsp;scanf("%d",&n1);
+<br>    	&nbsp;printf("Digite o 2 Valor!\n");
+<br>    	&nbsp;scanf("%d",&n2);
+<br>   		&nbsp;soma = n1 + n2;
+<br>   		&nbsp;printf("O valor Final sera %d",soma);
+<br>   		&nbsp;return 0; <br>
+		}
+
+		</code>
+
+		<h3>Estruturas Decisão[Condição]</h3>
+		<b>O que é?</b>
+		<p>Uma estrutura de decisão examina uma ou mais condições e decide quais instruções serão executadas dependendo se a condição foi ou não foi.</p>
+		<p>A linguagem C oferece quatro estruturas de decisão:<i> if, if-else, switch e o operador
+		condicional</i>.</p>
+		<b>O comando if </b>
+		<p>Se a expressão de teste for verdadeira (algo diferente de 0), o comando if executa a
+		instrução. Caso contrário a instrução não será executada.Abaio temos um Exemplo</p>
+		<code>
+			#include <stdio.h> <br>
+			#include <stdlib.h> <br>
+
+<br>			int main()
+<br>			{
+<br>   	 		int idade;
+<br>    		printf("Digite sua idade!\n");
+<br>    		scanf("%d",&idade);
+<br>    		if(idade >= 18)
+<br>        	printf("Voce foi Classificado!");
+<br>    		return 0;
+<br>			}
+<br>
+		</code><br>
+		<b>O comando if-else</b>
+		<p>Nos exemplos anteriores o comando if executará a instrução (ou instruções), se a expressão
+		de teste for verdadeira. Não fará nada se a expressão de teste for falsa.</p>
+		<p>O "Comando if" pode ser associado ao comando else, quando associado , executará uma instrução (ou instruções) se a
+		expressão de teste do comando if for falsa.</p>
+				<code>
+			#include <stdio.h> <br>
+			#include <stdlib.h> <br>
+
+<br>			int main()
+<br>			{
+<br>   	 		int idade;
+<br>    		printf("Digite sua idade!\n");
+<br>    		scanf("%d",&idade);
+<br>    		if(idade >= 18)
+<br>        	printf("Voce foi Classificado!");
+<br>			else if(idade >= 18)
+<br>      	 	printf("Voce foi Classificado");
+<br>    		return 0;
+<br>					
+<br>			}
+<br>
+		</code><br>
+		<b>O comando switch</b>
+		<p>O comado switch teste sucessivamente o valor de uma expressão contra uma lista de
+			constantes inteiras ou caracteres. Quando o valor coincide, os comandos associados àquela
+			constante são executados.</p>
+			
+			<br>Sintaxe: switch(expressão constante) {
+ 			<br>case constante1:
+ 			<br>instruções; break;
+ 			<br>case constante2:
+ 			<br>instruções; break;
+ 			<br>default:
+ 			<br>instruções;
+			<br>}
+		<h3>Estruturas de Repetição</h3>
+		<b>O que é</b>
+		<p>A linguagem C possui comandos para repetir uma sequência de instruções. Estas estruturas de repetição, também conhecidas como laços (do inglês loops).<br>Temos Três Tipos de Comandos de Repetição For , While e Do-While.<br>Cada Comando facilitar um pouco, dependedo do que estiver sendo desenvolvido, um só tipo de comando pode ser o suficiente.</p>
+
+		<i>Exemplo</i>
+		<br> for (expressão1; condição; expressão2)
+		<br> {
+		<br> comando (ou bloco);
+		<br> } <p>
+		<i><b>Na Pratica</b></i>
+		<br>for(i=1; i<=10; i++)
+		<br>{
+		<br>	x=i;
+		<br>	printf("%d\t", x);
+		<br>}
+
+ 
+
+	</body>
+</html>
